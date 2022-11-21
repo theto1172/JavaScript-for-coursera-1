@@ -1,0 +1,16 @@
+<body>
+	<p> Don't change this  paragraph.</p>
+	<div id="main">
+		<p>Change this paragraph.</p>
+		<p>Change this paragraph too.</p>
+		<p>And change this last paragraph.</p>
+	</div>
+	<script>
+		var myParagraph = document.querySelectorAll("#main p");
+		for(var i=0;i<myParagraph.length;i++){
+			myParagraph[i].style.fontSize="24px";
+			myParagraph[i].style.color="red";
+		}
+
+	</script>
+</body>

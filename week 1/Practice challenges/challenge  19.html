@@ -1,0 +1,34 @@
+<body>
+	<nav>
+ <ul>
+ <li><a href="#" id="link1">link one</a></li>
+ <li><a href="#" id="link2">link two</a></li>
+ <li><a href="#" id="link3">link three</a></li>
+ <li><a href="#" id="link4">link four</a></li>
+ <li><a href="#" id="link5">link five</a></li>
+ </ul>
+</nav>
+<p id="paralink1">Looks like you clicked the first link in the list</p>
+<p id="paralink2">Looks like you clicked the second link in the list</p>
+<p id="paralink3">Looks like you clicked the third link in the list</p>
+<p id="paralink4">Looks like you clicked the fourth link in the list</p>
+<p id="paralink5">Looks like you clicked the fifth link in the list</p>
+<script>
+	const myLinks = document.querySelectorAll("nav ul li a");
+	const myParagraphs = document.querySelectorAll("p");
+	for (let i=0;i<myLinks.length;i++){
+		myLinks[i].addEventListener("click",function(){
+			const paraNum = "#para"+this.id;
+			for (let i=0;i<myParagraphs.length;i++){
+				myParagraphs[i].style.color="black";
+			}
+
+			const thisPara = document.querySelector(paraNum);
+			thisPara.style.color="red";
+
+
+		});
+	}
+
+</script>
+</body>

@@ -1,0 +1,22 @@
+<body>
+	<nav>
+ <ul>
+ <li><a href="#">link one</a></li>
+ <li><a href="#">link two</a></li>
+ <li><a href="#">link three</a></li>
+ <li><a href="#">link four</a></li>
+ <li><a href="#">link five</a></li>
+ </ul>
+</nav>
+<p id="paragraph">Click a link to change this
+paragraph</p>
+<script>
+	var myLinks = document.querySelectorAll("nav ul li a");
+    for (var i=0;i<myLinks.length;i++){
+        myLinks[i].addEventListener('click',function(){
+            var thisLink = this.innerHTML;
+           document.getElementById('paragraph').innerHTML = `You clicked ${thisLink}`;
+        });
+    }
+</script>
+</body>
